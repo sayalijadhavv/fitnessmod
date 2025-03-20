@@ -10,7 +10,7 @@
             background-color: #f8f9fa;
         }
         .hero {
-            background: url('your_image_url_here') no-repeat center center;
+            background: url('gym.png') no-repeat center center;
             height: 400px;
             color: #fff;
             text-align: center;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro Fitness</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'trainer' %}">Trainer</a></li>
+                <li><a href="{% url 'service' %}">Service</a></li>
+                <li><a href="{% url 'membership' %}">Membership</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>MAKE YOUR DREAM PHYSIQUE</h1>
+        <p>Start by taking inspirations, continue it to give inspirations.</p>
+        <a href="{% url 'join' %}" class="join-button">JOIN US</a>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        {% for service in services %}
+            <div>
+                <h3>{{ service.name }}</h3>
+                <p>{{ service.description }}</p>
+            </div>
+        {% endfor %}
+    </section>
+</body>
+</html>
